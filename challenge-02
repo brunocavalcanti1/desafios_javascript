@@ -4,7 +4,7 @@ function somatorio (x, y){
     }
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
-resultado = (somatorio (10,5))+5
+var resultado = somatorio (10,5)+5
 
 // Qual o valor atualizado dessa variável?
 20
@@ -17,8 +17,8 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-function retornoString (resultado){
-    z = resultado
+function retornoString (){
+    z = 10
     return 'O valor da variável agora é '+ z
     }
 
@@ -26,7 +26,7 @@ function retornoString (resultado){
 retornoString(10)
 
 // Qual o retorno da função? (Use comentários de bloco).
-10
+/*10*/
 
 /*
 Crie uma função com as seguintes características:
@@ -37,12 +37,21 @@ Crie uma função com as seguintes características:
 */
 
 function multiplicacao(x,y,z){
-    if(x!= null && y!= null && z!= null){
+    if(x === underfined || y === underfined || z === underfined){
         return (x*y*z)+2
         }
     else {
         return 'Preencha todos os valores corretamente!'
         }
+   }
+   
+OU 
+
+function multiplicacao(x,y,z){
+    if(x === undefined || y === undefined || z === undefined){
+        return (x*y*z)+2
+        }
+        return 'Preencha todos os valores corretamente!' 
    }
     
 
@@ -69,16 +78,16 @@ Crie uma função com as seguintes características:
 */
 
 function sum (x,y,z){
-    if(x!=null && y==null && z==null){
+    if(x !== undefined && y === undefined && z === undefined){
         return x
     }
-    else if(x!=null && y!=null && z==null){
+    else if(x !== undefined && y !== undefined && z === undefined){
         return x + y
     }
-    else if(x!=null && y!=null && z!=null){
+    else if(x !== undefined && y !== undefined && z !== undefined){
         return (x+y)/z
     }
-    else if(x==null && y==null && z==null){
+    else if(x === undefined && y === undefined && z === undefined){
         return false
     }else{
         return null
